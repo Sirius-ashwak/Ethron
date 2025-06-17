@@ -163,7 +163,7 @@ export default function IntroPage({ onEnter }: IntroPageProps) {
               </div>
             </div>
 
-            {/* Visual */}
+            {/* Visual - Abstract Data Visualization */}
             <div 
               className="relative"
               style={{ 
@@ -172,37 +172,75 @@ export default function IntroPage({ onEnter }: IntroPageProps) {
               }}
             >
               <div className="relative w-full h-96 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden">
-                {/* Simulated Global Map */}
+                {/* Abstract Data Visualization */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative w-80 h-80">
-                    {/* Globe representation */}
-                    <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-full relative overflow-hidden">
-                      {/* Crisis points */}
-                      {[...Array(12)].map((_, i) => (
+                    {/* Central Hub */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full shadow-lg">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full animate-pulse opacity-50"></div>
+                    </div>
+                    
+                    {/* Data Nodes */}
+                    {[...Array(8)].map((_, i) => {
+                      const angle = (i / 8) * 2 * Math.PI;
+                      const radius = 120;
+                      const x = Math.cos(angle) * radius;
+                      const y = Math.sin(angle) * radius;
+                      
+                      return (
                         <div
                           key={i}
-                          className="absolute w-2 h-2 bg-red-500 rounded-full animate-pulse"
+                          className="absolute w-4 h-4 bg-blue-500 rounded-full shadow-md"
                           style={{
-                            left: `${20 + Math.random() * 60}%`,
-                            top: `${20 + Math.random() * 60}%`,
-                            animationDelay: `${Math.random() * 2}s`
+                            left: `calc(50% + ${x}px - 8px)`,
+                            top: `calc(50% + ${y}px - 8px)`,
+                            animationDelay: `${i * 0.2}s`
                           }}
-                        />
-                      ))}
-                      {/* Data streams */}
-                      <div className="absolute inset-0">
-                        {[...Array(3)].map((_, i) => (
-                          <div
+                        >
+                          <div className="absolute inset-0 bg-blue-400 rounded-full animate-ping opacity-75"></div>
+                        </div>
+                      );
+                    })}
+                    
+                    {/* Connection Lines */}
+                    <svg className="absolute inset-0 w-full h-full">
+                      {[...Array(8)].map((_, i) => {
+                        const angle = (i / 8) * 2 * Math.PI;
+                        const radius = 120;
+                        const x1 = 160; // center
+                        const y1 = 160; // center
+                        const x2 = x1 + Math.cos(angle) * radius;
+                        const y2 = y1 + Math.sin(angle) * radius;
+                        
+                        return (
+                          <line
                             key={i}
-                            className="absolute inset-0 border border-blue-300/30 rounded-full animate-spin"
-                            style={{ 
-                              animationDuration: `${20 + i * 10}s`,
-                              animationDirection: i % 2 ? 'reverse' : 'normal'
-                            }}
+                            x1={x1}
+                            y1={y1}
+                            x2={x2}
+                            y2={y2}
+                            stroke="rgba(59, 130, 246, 0.3)"
+                            strokeWidth="2"
+                            className="animate-pulse"
+                            style={{ animationDelay: `${i * 0.1}s` }}
                           />
-                        ))}
-                      </div>
-                    </div>
+                        );
+                      })}
+                    </svg>
+                    
+                    {/* Floating Data Points */}
+                    {[...Array(12)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute w-2 h-2 bg-purple-400 rounded-full animate-pulse"
+                        style={{
+                          left: `${20 + Math.random() * 60}%`,
+                          top: `${20 + Math.random() * 60}%`,
+                          animationDelay: `${Math.random() * 2}s`,
+                          animationDuration: `${2 + Math.random() * 2}s`
+                        }}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
