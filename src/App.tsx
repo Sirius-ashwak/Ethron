@@ -34,6 +34,7 @@ function App() {
   const [showAgentChat, setShowAgentChat] = useState(false);
   const [showImpactHub, setShowImpactHub] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('en');
+  const [showDashboard, setShowDashboard] = useState(true);
 
   const handleCrisisSelect = (crisis: Crisis) => {
     setSelectedCrisis(crisis);
@@ -127,11 +128,17 @@ function App() {
 
       {/* Main Content */}
       <div className="flex h-screen pt-20">
-        {/* Left Dashboard */}
-        <Dashboard crises={filteredCrises} />
+        {/* Left Dashboard - Only show if enabled */}
+        {showDashboard && <Dashboard crises={filteredCrises} />}
 
         {/* Central Map Area */}
-        <div className="flex-1 relative" style={{ marginLeft: '0px', marginRight: selectedCrisis ? '384px' : '0' }}>
+        <div 
+          className="flex-1 relative transition-all duration-300" 
+          style={{ 
+            marginLeft: showDashboard ? '384px' : '0px', 
+            marginRight: selectedCrisis ? '384px' : '0' 
+          }}
+        >
           {/* Map Container */}
           <div className="h-full relative">
             <GlobalMap
@@ -140,49 +147,60 @@ function App() {
               onCrisisSelect={handleCrisisSelect}
             />
 
-            {/* Floating Controls */}
-            <div className="absolute top-8 left-8 z-20 space-y-3">
+            {/* Floating Controls - Left Side */}
+            <div className="absolute top-6 left-6 z-20 flex flex-col space-y-3">
+              {/* Dashboard Toggle */}
+              <button
+                onClick={() => setShowDashboard(!showDashboard)}
+                className="flex items-center justify-center w-12 h-12 bg-gray-900/90 backdrop-blur-sm hover:bg-gray-800 text-white rounded-xl border border-gray-700/50 shadow-lg transition-all duration-200 hover:scale-105"
+                title="Toggle Dashboard"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center space-x-3 bg-white/90 backdrop-blur-sm hover:bg-white text-gray-900 px-4 py-3 rounded-2xl border border-gray-200/50 shadow-lg transition-all duration-200"
+                className="flex items-center justify-center w-12 h-12 bg-gray-900/90 backdrop-blur-sm hover:bg-gray-800 text-white rounded-xl border border-gray-700/50 shadow-lg transition-all duration-200 hover:scale-105"
+                title="Filters"
               >
                 <Filter className="w-5 h-5" />
-                <span className="font-medium">Filters</span>
               </button>
 
               <button
                 onClick={() => setShowAIInsights(!showAIInsights)}
-                className="flex items-center space-x-3 bg-white/90 backdrop-blur-sm hover:bg-white text-gray-900 px-4 py-3 rounded-2xl border border-gray-200/50 shadow-lg transition-all duration-200"
+                className="flex items-center justify-center w-12 h-12 bg-gray-900/90 backdrop-blur-sm hover:bg-gray-800 text-white rounded-xl border border-gray-700/50 shadow-lg transition-all duration-200 hover:scale-105"
+                title="AI Insights"
               >
-                <Brain className="w-5 h-5 text-blue-600" />
-                <span className="font-medium">AI Insights</span>
+                <Brain className="w-5 h-5 text-cyan-400" />
               </button>
 
               <button
                 onClick={() => setShowFoodTracker(!showFoodTracker)}
-                className="flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-2xl shadow-lg transition-all duration-200"
+                className="flex items-center justify-center w-12 h-12 bg-cyan-600/90 backdrop-blur-sm hover:bg-cyan-700 text-white rounded-xl shadow-lg transition-all duration-200 hover:scale-105"
+                title="Food Security"
               >
                 <Utensils className="w-5 h-5" />
-                <span className="font-medium">Food Security</span>
               </button>
 
               <button
                 onClick={() => setShowExportPanel(!showExportPanel)}
-                className="flex items-center space-x-3 bg-white/90 backdrop-blur-sm hover:bg-white text-gray-900 px-4 py-3 rounded-2xl border border-gray-200/50 shadow-lg transition-all duration-200"
+                className="flex items-center justify-center w-12 h-12 bg-gray-900/90 backdrop-blur-sm hover:bg-gray-800 text-white rounded-xl border border-gray-700/50 shadow-lg transition-all duration-200 hover:scale-105"
+                title="Export"
               >
                 <Download className="w-5 h-5" />
-                <span className="font-medium">Export</span>
               </button>
             </div>
 
             {/* Top Right Controls */}
-            <div className="absolute top-8 right-8 z-20 flex items-center space-x-3">
+            <div className="absolute top-6 right-6 z-20 flex items-center space-x-3">
               <button
                 onClick={() => setShowSurplusRegistration(true)}
-                className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-2xl shadow-lg transition-all duration-200"
+                className="flex items-center space-x-2 bg-green-600/90 backdrop-blur-sm hover:bg-green-700 text-white px-4 py-3 rounded-xl shadow-lg transition-all duration-200 hover:scale-105"
               >
-                <Plus className="w-5 h-5" />
-                <span className="font-medium">Donate Food</span>
+                <Plus className="w-4 h-4" />
+                <span className="font-medium text-sm">Donate Food</span>
               </button>
               
               <MultiLanguageSupport
@@ -192,10 +210,10 @@ function App() {
             </div>
 
             {/* Crisis Count Badge */}
-            <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 border border-gray-200/50 shadow-lg">
+            <div className="absolute bottom-6 left-6 bg-gray-900/90 backdrop-blur-sm rounded-xl px-4 py-3 border border-gray-700/50 shadow-lg">
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                <span className="font-semibold text-gray-900">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                <span className="font-semibold text-white text-sm">
                   {filteredCrises.length} Active Crises
                 </span>
               </div>
@@ -215,7 +233,7 @@ function App() {
               ></div>
               
               {showFilters && (
-                <div className="absolute top-24 left-8 w-80">
+                <div className="absolute top-24 left-24 w-80">
                   <FilterPanel 
                     crises={mockCrises}
                     onFilterChange={handleFilterChange}
@@ -234,7 +252,7 @@ function App() {
               )}
 
               {showExportPanel && (
-                <div className="absolute top-24 right-8 w-80">
+                <div className="absolute top-24 right-24 w-80">
                   <ExportReports 
                     crises={filteredCrises}
                     selectedCrisis={selectedCrisis}
@@ -252,11 +270,11 @@ function App() {
         />
       </div>
 
-      {/* Floating Action Buttons */}
-      <div className="fixed bottom-8 right-8 z-40 flex flex-col space-y-3">
+      {/* Floating Action Buttons - Bottom Right */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
         <button
           onClick={() => setShowForecastTimeline(true)}
-          className="p-4 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl shadow-xl transition-all transform hover:scale-105"
+          className="flex items-center justify-center w-14 h-14 bg-purple-600/90 backdrop-blur-sm hover:bg-purple-700 text-white rounded-xl shadow-xl transition-all transform hover:scale-105"
           title="Forecast Timeline"
         >
           <Calendar className="w-6 h-6" />
@@ -264,7 +282,7 @@ function App() {
         
         <button
           onClick={() => setShowAgentChat(true)}
-          className="p-4 bg-cyan-600 hover:bg-cyan-700 text-white rounded-2xl shadow-xl transition-all transform hover:scale-105"
+          className="flex items-center justify-center w-14 h-14 bg-cyan-600/90 backdrop-blur-sm hover:bg-cyan-700 text-white rounded-xl shadow-xl transition-all transform hover:scale-105"
           title="AI Agent Chat"
         >
           <MessageCircle className="w-6 h-6" />
@@ -272,7 +290,7 @@ function App() {
         
         <button
           onClick={() => setShowImpactHub(true)}
-          className="p-4 bg-pink-600 hover:bg-pink-700 text-white rounded-2xl shadow-xl transition-all transform hover:scale-105"
+          className="flex items-center justify-center w-14 h-14 bg-pink-600/90 backdrop-blur-sm hover:bg-pink-700 text-white rounded-xl shadow-xl transition-all transform hover:scale-105"
           title="Impact Hub"
         >
           <Heart className="w-6 h-6" />
