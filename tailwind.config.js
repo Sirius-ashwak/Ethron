@@ -37,6 +37,9 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
         'shimmer': 'shimmer 2s linear infinite',
+        'neural-pulse': 'neuralPulse 3s ease-in-out infinite',
+        'neural-wave': 'neuralWave 2s ease-in-out infinite',
+        'quantum-ripple': 'quantumRipple 3s ease-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -62,6 +65,18 @@ export default {
         shimmer: {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
+        },
+        neuralPulse: {
+          '0%, 100%': { opacity: '0.3' },
+          '50%': { opacity: '0.8' },
+        },
+        neuralWave: {
+          '0%, 100%': { transform: 'scaleY(0.5)' },
+          '50%': { transform: 'scaleY(1.2)' },
+        },
+        quantumRipple: {
+          '0%': { transform: 'scale(0.8)', opacity: '1' },
+          '100%': { transform: 'scale(2)', opacity: '0' },
         },
       },
       backdropBlur: {

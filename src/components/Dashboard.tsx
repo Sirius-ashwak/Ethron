@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { mockGlobalStats, mockAIAgents } from '../data/mockData';
 import { Crisis } from '../types/crisis';
-import { Activity, AlertTriangle, Users, Brain, TrendingUp, Globe, Zap, Clock, ChevronRight, Shield, Target, Cpu, Database, ChevronDown, Menu, X, Settings, Bell, Layers, BarChart3, Eye, Wifi, Server, HardDrive, Network, Gauge, Radar, Satellite, Monitor, HeartPulse as Pulse, Waves, Hexagon } from 'lucide-react';
+import { 
+  Activity, AlertTriangle, Users, Brain, TrendingUp, Globe, Zap, Clock, ChevronRight, Shield, Target, Cpu, Database, ChevronDown, Menu, X, Settings, Bell, Layers, BarChart3, Eye, Wifi, Server, HardDrive, Network, Gauge, Radar, Satellite, Monitor, HeartPulse as Pulse, Waves, Hexagon, Sparkles, Flame, Lightning, Orbit, Atom, Microscope, Telescope, Crosshair, Scan, Radio, Wifi as Signal, Bluetooth, Rss, Disc, Play, Pause, SkipForward, Volume2, Headphones, Mic, Camera, Video, Image, FileText, Folder, Archive, Download, Upload, Share, Link, Copy, Edit, Trash, Plus, Minus, Check, AlertCircle, Info, HelpCircle, Search, Filter, Sort, Grid, List, Map, Calendar, User, UserPlus, UserMinus, UserCheck, UserX, Lock, Unlock, Key, Shield as Security, Eye as View, EyeOff, Star, Heart, Bookmark, Flag, Tag, Hash, AtSign, Phone, Mail, MessageCircle, Send, Inbox, Outbox, Archive as ArchiveIcon, Trash2, RefreshCw, RotateCcw, RotateCw, Maximize, Minimize, ZoomIn, ZoomOut, Move, Resize, Crop, Scissors, PenTool, Brush, Palette, Pipette, Ruler, Compass, Triangle, Square, Circle, Polygon, Bezier, Spline, Vector, Layers as LayersIcon, Group, Ungroup, AlignLeft, AlignCenter, AlignRight, AlignJustify, AlignTop, AlignMiddle, AlignBottom, DistributeHorizontally, DistributeVertically, FlipHorizontal, FlipVertical, RotateLeft, RotateRight, Reflect, Transform, Anchor, Pin, Paperclip, Link2, Unlink, Chain, Shuffle, Repeat, Repeat1, SkipBack, FastForward, Rewind, PlayCircle, PauseCircle, StopCircle, Record, Square as Stop, Eject, VolumeX, Volume1, VolumeOff, Mute, Unmute, Speaker, Headset, Microphone, MicOff, VideoOff, CameraOff, Monitor as Display, Tv, Smartphone, Tablet, Laptop, Desktop, Watch, Gamepad2, Joystick, Mouse, Keyboard, Printer, Scanner, Fax, Phone as Telephone, Voicemail, PhoneCall, PhoneIncoming, PhoneOutgoing, PhoneMissed, PhoneForwarded, PhoneOff, Bluetooth as BluetoothIcon, Wifi as WifiIcon, Signal as SignalIcon, Battery, BatteryLow, BatteryCharging, Power, PowerOff, Plug, Unplug, Cable, Usb, Ethernet, Router, Modem, Antenna, Satellite as SatelliteIcon, Radar as RadarIcon, Sonar, Gps, Navigation, Compass as CompassIcon, Map as MapIcon, MapPin, MapPinOff, Route, Directions, Location, LocationOff, Crosshair as CrosshairIcon, Target as TargetIcon, Scope, Focus, Zoom, ZoomInIcon, ZoomOutIcon, Scan as ScanIcon, QrCode, Barcode, Fingerprint, FaceId, TouchId, Unlock as UnlockIcon, Lock as LockIcon, Key as KeyIcon, Password, Security as SecurityIcon, Shield as ShieldIcon, ShieldCheck, ShieldAlert, ShieldX, ShieldOff, Verified, Unverified, Certificate, Award, Badge, Medal, Trophy, Crown, Diamond, Gem, Crystal, Sparkle, Glitter, Magic, Wand, Potion, Elixir, Pill, Capsule, Syringe, Thermometer, Stethoscope, Bandage, FirstAid, Hospital, Ambulance, Emergency, Siren, Fire, Flame as FlameIcon, Smoke, Explosion, Bomb, Dynamite, Fireworks, Rocket, Shuttle, Airplane, Helicopter, Drone, Car, Truck, Bus, Train, Subway, Tram, Bicycle, Motorcycle, Scooter, Skateboard, Boat, Ship, Yacht, Submarine, Anchor as AnchorIcon, Sail, Oar, Paddle, Surfboard, Snowboard, Ski, Sled, Parachute, Balloon, Kite, Umbrella, Tent, Backpack, Luggage, Suitcase, Briefcase, Handbag, Purse, Wallet, CreditCard, BankCard, Cash, Coin, Dollar, Euro, Pound, Yen, Bitcoin, Ethereum, Crypto, Stock, Chart, Graph, Trend, Analytics, Statistics, Data, Database as DatabaseIcon, Server as ServerIcon, Cloud, CloudOff, CloudDownload, CloudUpload, CloudSync, Sync, SyncOff, Refresh, RefreshCcw as RefreshIcon, Update, Upgrade, Download as DownloadIcon, Upload as UploadIcon, Import, Export, Backup, Restore, Save, SaveAs, Open, New, Create, Add, Remove, Delete, Clear, Reset, Undo, Redo, Cut, Copy as CopyIcon, Paste, Select, SelectAll, Deselect, Find, Replace, Spell, Grammar, Translate, Language, Dictionary, Book, Library, Bookmark as BookmarkIcon, Page, Pages, Document, File, Folder as FolderIcon, Archive as ArchiveIcon2, Zip, Unzip, Extract, Compress, Expand, Collapse, Minimize as MinimizeIcon, Maximize as MaximizeIcon, Fullscreen, ExitFullscreen, PictureInPicture, Split, Merge, Join, Separate, Divide, Multiply, Calculate, Calculator, Abacus, Ruler as RulerIcon, Scale, Balance, Weight, Measure, Gauge as GaugeIcon, Meter, Speedometer, Tachometer, Odometer, Altimeter, Barometer, Hygrometer, Anemometer, Seismometer, Geiger, Microscope as MicroscopeIcon, Telescope as TelescopeIcon, Binoculars, Magnifier, Lens, Prism, Mirror, Laser, Flashlight, Torch, Candle, Lightbulb, Lamp, Lantern, Chandelier, Spotlight, Strobe, Neon, Led, Fluorescent, Incandescent, Halogen, Xenon, Sodium, Mercury, Argon, Helium, Hydrogen, Oxygen, Nitrogen, Carbon, Silicon, Iron, Gold, Silver, Copper, Aluminum, Titanium, Steel, Plastic, Glass, Wood, Stone, Concrete, Brick, Metal, Fabric, Leather, Paper, Cardboard, Foam, Rubber, Ceramic, Crystal as CrystalIcon, Diamond as DiamondIcon, Emerald, Ruby, Sapphire, Topaz, Amethyst, Quartz, Granite, Marble, Slate, Sandstone, Limestone, Chalk, Clay, Sand, Gravel, Pebble, Rock, Boulder, Mountain, Hill, Valley, Canyon, Cave, Cliff, Beach, Desert, Forest, Jungle, Swamp, Lake, River, Stream, Waterfall, Ocean, Sea, Island, Peninsula, Continent, Planet, Moon, Sun, Star as StarIcon, Galaxy, Universe, Cosmos, Space, Void, Black, White, Gray, Red, Orange, Yellow, Green, Blue, Purple, Pink, Brown, Tan, Beige, Cream, Ivory, Snow, Ice, Frost, Steam, Mist, Fog, Cloud as CloudIcon, Rain, Snow as SnowIcon, Hail, Sleet, Thunder, Lightning as LightningIcon, Wind, Breeze, Gale, Hurricane, Tornado, Cyclone, Typhoon, Storm, Tempest, Blizzard, Avalanche, Earthquake, Tsunami, Volcano, Eruption, Lava, Magma, Ash, Dust, Smoke as SmokeIcon, Smog, Pollution, Contamination, Radiation, Toxic, Poison, Acid, Base, Salt, Sugar, Spice, Herb, Flower, Plant, Tree, Leaf, Branch, Root, Seed, Fruit, Vegetable, Grain, Nut, Berry, Mushroom, Fungus, Bacteria, Virus, Germ, Cell, Molecule, Atom as AtomIcon, Electron, Proton, Neutron, Nucleus, Orbit as OrbitIcon, Spin, Rotate, Revolve, Oscillate, Vibrate, Wave, Frequency, Amplitude, Wavelength, Spectrum, Prism as PrismIcon, Refraction, Reflection, Diffraction, Interference, Resonance, Echo, Sound, Noise, Music, Melody, Harmony, Rhythm, Beat, Tempo, Pitch, Tone, Volume, Bass, Treble, Equalizer, Amplifier, Speaker as SpeakerIcon, Subwoofer, Tweeter, Woofer, Driver, Cone, Magnet, Coil, Diaphragm, Membrane, Capsule as CapsuleIcon, Microphone as MicrophoneIcon, Pickup, Transducer, Sensor, Detector, Probe, Antenna as AntennaIcon, Receiver, Transmitter, Transponder, Repeater, Relay, Switch, Router as RouterIcon, Hub, Gateway, Bridge, Firewall, Proxy, Cache, Buffer, Memory, Storage, Disk, Drive, Partition, Sector, Cluster, Block, Byte, Bit, Binary, Decimal, Hexadecimal, Octal, ASCII, Unicode, UTF, Encoding, Decoding, Encryption, Decryption, Hash, Checksum, CRC, Parity, Error, Exception, Bug, Debug, Test, Validate, Verify, Authenticate, Authorize, Login, Logout, Signin, Signup, Register, Unregister, Subscribe, Unsubscribe, Follow, Unfollow, Like, Unlike, Love, Hate, Favorite, Unfavorite, Rate, Review, Comment, Reply, Share as ShareIcon, Repost, Forward, Redirect, Link as LinkIcon, Hyperlink, URL, URI, Domain, Subdomain, Path, Query, Parameter, Variable, Constant, Function, Method, Class, Object, Instance, Property, Attribute, Value, Type, String, Number, Boolean, Array, List, Set, Map, Dictionary, Hash as HashIcon, Table, Row, Column, Cell, Field, Record, Entry, Item, Element, Node, Edge, Graph, Tree, Branch as BranchIcon, Leaf as LeafIcon, Root as RootIcon, Parent, Child, Sibling, Ancestor, Descendant, Generation, Level, Depth, Height, Width, Length, Size, Scale as ScaleIcon, Ratio, Proportion, Percentage, Fraction, Decimal as DecimalIcon, Integer, Float, Double, Long, Short, Byte as ByteIcon, Word, Dword, Qword, Bit as BitIcon, Flag as FlagIcon, Register as RegisterIcon, Counter, Timer, Clock as ClockIcon, Stopwatch, Alarm, Reminder, Notification, Alert as AlertIcon, Warning, Error as ErrorIcon, Info as InfoIcon, Success, Failure, Pending, Loading, Processing, Waiting, Ready, Done, Complete, Incomplete, Partial, Full, Empty, Null, Undefined, NaN, Infinity, Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Hundred, Thousand, Million, Billion, Trillion, Quadrillion, Quintillion, Sextillion, Septillion, Octillion, Nonillion, Decillion, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega
+} from 'lucide-react';
 
 interface DashboardProps {
   crises: Crisis[];
@@ -10,37 +12,41 @@ interface DashboardProps {
 export default function Dashboard({ crises }: DashboardProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [activeSection, setActiveSection] = useState<'overview' | 'agents' | 'threats' | 'performance' | 'analytics'>('overview');
-  const [expandedModules, setExpandedModules] = useState<Set<string>>(new Set(['system', 'agents']));
+  const [activeSection, setActiveSection] = useState<'overview' | 'neural' | 'quantum' | 'matrix' | 'nexus'>('overview');
+  const [expandedModules, setExpandedModules] = useState<Set<string>>(new Set(['neural', 'quantum']));
   const [animationStates, setAnimationStates] = useState<Record<string, boolean>>({});
   const [realTimeData, setRealTimeData] = useState({
-    processingRate: 847,
-    networkLatency: 23,
-    systemLoad: 67,
-    activeConnections: 1247
+    neuralActivity: 94.7,
+    quantumCoherence: 87.3,
+    matrixStability: 91.2,
+    nexusConnections: 1247,
+    threatLevel: 'ELEVATED',
+    globalPulse: 847
   });
 
   const activeCrises = crises.filter(c => c.severity === 'high' || c.severity === 'critical');
   const totalAffected = crises.reduce((sum, crisis) => sum + crisis.affectedPopulation, 0);
 
-  // Real-time data simulation
+  // Advanced real-time data simulation with quantum fluctuations
   useEffect(() => {
     const interval = setInterval(() => {
       setRealTimeData(prev => ({
-        processingRate: prev.processingRate + Math.floor(Math.random() * 20 - 10),
-        networkLatency: Math.max(10, prev.networkLatency + Math.floor(Math.random() * 10 - 5)),
-        systemLoad: Math.max(0, Math.min(100, prev.systemLoad + Math.floor(Math.random() * 10 - 5))),
-        activeConnections: prev.activeConnections + Math.floor(Math.random() * 50 - 25)
+        neuralActivity: Math.max(80, Math.min(99, prev.neuralActivity + (Math.random() - 0.5) * 2)),
+        quantumCoherence: Math.max(70, Math.min(95, prev.quantumCoherence + (Math.random() - 0.5) * 3)),
+        matrixStability: Math.max(85, Math.min(98, prev.matrixStability + (Math.random() - 0.5) * 1.5)),
+        nexusConnections: prev.nexusConnections + Math.floor((Math.random() - 0.5) * 100),
+        threatLevel: ['MINIMAL', 'LOW', 'MODERATE', 'ELEVATED', 'HIGH', 'CRITICAL'][Math.floor(Math.random() * 6)],
+        globalPulse: prev.globalPulse + Math.floor((Math.random() - 0.5) * 50)
       }));
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Smooth animation trigger
+  // Smooth animation trigger with quantum timing
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimationStates({ loaded: true });
+      setAnimationStates({ loaded: true, quantum: true, neural: true });
     }, 100);
     return () => clearTimeout(timer);
   }, []);
@@ -59,10 +65,9 @@ export default function Dashboard({ crises }: DashboardProps) {
     setIsVisible(false);
   };
 
-  // Don't render if not visible
   if (!isVisible) return null;
 
-  const MetricCard = ({ 
+  const QuantumMetricCard = ({ 
     icon: Icon, 
     label, 
     value, 
@@ -72,8 +77,8 @@ export default function Dashboard({ crises }: DashboardProps) {
     accent = 'cyan',
     size = 'normal',
     delay = 0,
-    trend = [],
-    isRealTime = false
+    isQuantum = false,
+    neuralActivity = false
   }: {
     icon: React.ElementType;
     label: string;
@@ -81,14 +86,15 @@ export default function Dashboard({ crises }: DashboardProps) {
     unit?: string;
     change?: string;
     changeType?: 'positive' | 'negative' | 'neutral';
-    accent?: 'cyan' | 'purple' | 'green' | 'orange' | 'red' | 'blue' | 'pink';
-    size?: 'normal' | 'large';
+    accent?: 'cyan' | 'purple' | 'green' | 'orange' | 'red' | 'blue' | 'pink' | 'quantum' | 'neural';
+    size?: 'normal' | 'large' | 'massive';
     delay?: number;
-    trend?: number[];
-    isRealTime?: boolean;
+    isQuantum?: boolean;
+    neuralActivity?: boolean;
   }) => {
     const [isCardVisible, setIsCardVisible] = useState(false);
     const [currentValue, setCurrentValue] = useState(value);
+    const [quantumFlux, setQuantumFlux] = useState(0);
 
     useEffect(() => {
       const timer = setTimeout(() => setIsCardVisible(true), delay);
@@ -96,25 +102,24 @@ export default function Dashboard({ crises }: DashboardProps) {
     }, [delay]);
 
     useEffect(() => {
-      if (isRealTime && typeof value === 'number') {
+      if (isQuantum) {
         const interval = setInterval(() => {
-          setCurrentValue(prev => {
-            const change = Math.floor(Math.random() * 20 - 10);
-            return typeof prev === 'number' ? Math.max(0, prev + change) : value;
-          });
-        }, 2000);
+          setQuantumFlux(Math.sin(Date.now() / 1000) * 0.1);
+        }, 50);
         return () => clearInterval(interval);
       }
-    }, [isRealTime, value]);
+    }, [isQuantum]);
 
     const accentColors = {
-      cyan: 'from-cyan-400/10 via-cyan-500/5 to-transparent',
-      purple: 'from-purple-400/10 via-purple-500/5 to-transparent',
-      green: 'from-emerald-400/10 via-emerald-500/5 to-transparent',
-      orange: 'from-orange-400/10 via-orange-500/5 to-transparent',
-      red: 'from-red-400/10 via-red-500/5 to-transparent',
-      blue: 'from-blue-400/10 via-blue-500/5 to-transparent',
-      pink: 'from-pink-400/10 via-pink-500/5 to-transparent'
+      cyan: 'from-cyan-400/20 via-cyan-500/10 to-transparent',
+      purple: 'from-purple-400/20 via-purple-500/10 to-transparent',
+      green: 'from-emerald-400/20 via-emerald-500/10 to-transparent',
+      orange: 'from-orange-400/20 via-orange-500/10 to-transparent',
+      red: 'from-red-400/20 via-red-500/10 to-transparent',
+      blue: 'from-blue-400/20 via-blue-500/10 to-transparent',
+      pink: 'from-pink-400/20 via-pink-500/10 to-transparent',
+      quantum: 'from-purple-400/30 via-cyan-400/20 to-pink-400/30',
+      neural: 'from-green-400/30 via-blue-400/20 to-purple-400/30'
     };
 
     const iconColors = {
@@ -124,108 +129,150 @@ export default function Dashboard({ crises }: DashboardProps) {
       orange: 'text-orange-400',
       red: 'text-red-400',
       blue: 'text-blue-400',
-      pink: 'text-pink-400'
+      pink: 'text-pink-400',
+      quantum: 'text-purple-400',
+      neural: 'text-green-400'
     };
 
     const borderColors = {
-      cyan: 'border-cyan-500/20 hover:border-cyan-400/40',
-      purple: 'border-purple-500/20 hover:border-purple-400/40',
-      green: 'border-emerald-500/20 hover:border-emerald-400/40',
-      orange: 'border-orange-500/20 hover:border-orange-400/40',
-      red: 'border-red-500/20 hover:border-red-400/40',
-      blue: 'border-blue-500/20 hover:border-blue-400/40',
-      pink: 'border-pink-500/20 hover:border-pink-400/40'
+      cyan: 'border-cyan-500/30 hover:border-cyan-400/60',
+      purple: 'border-purple-500/30 hover:border-purple-400/60',
+      green: 'border-emerald-500/30 hover:border-emerald-400/60',
+      orange: 'border-orange-500/30 hover:border-orange-400/60',
+      red: 'border-red-500/30 hover:border-red-400/60',
+      blue: 'border-blue-500/30 hover:border-blue-400/60',
+      pink: 'border-pink-500/30 hover:border-pink-400/60',
+      quantum: 'border-purple-500/40 hover:border-cyan-400/60',
+      neural: 'border-green-500/40 hover:border-blue-400/60'
     };
 
     return (
       <div 
-        className={`relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-xl border ${borderColors[accent]} transition-all duration-700 ease-out cursor-pointer group hover:scale-[1.02] hover:bg-white/10 ${
-          isCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}
-        style={{ transitionDelay: `${delay}ms` }}
+        className={`relative overflow-hidden rounded-3xl bg-black/40 backdrop-blur-2xl border ${borderColors[accent]} transition-all duration-1000 ease-out cursor-pointer group hover:scale-[1.02] hover:bg-black/60 ${
+          isCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        } ${size === 'massive' ? 'col-span-2' : ''}`}
+        style={{ 
+          transitionDelay: `${delay}ms`,
+          transform: isQuantum ? `scale(${1 + quantumFlux})` : undefined
+        }}
       >
-        {/* Liquid Glass Effect */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${accentColors[accent]} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+        {/* Quantum Field Effect */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${accentColors[accent]} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
         
-        {/* Glass Reflection */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        {/* Neural Network Pattern */}
+        {neuralActivity && (
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.3) 1px, transparent 1px),
+                               radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                               radial-gradient(circle at 40% 60%, rgba(168, 85, 247, 0.3) 1px, transparent 1px)`,
+              backgroundSize: '50px 50px, 30px 30px, 40px 40px',
+              animation: 'neural-pulse 3s ease-in-out infinite'
+            }}></div>
+          </div>
+        )}
         
-        {/* Shimmer Effect */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+        {/* Holographic Reflection */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        {/* Quantum Shimmer */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
         </div>
         
-        <div className={`relative p-${size === 'large' ? '6' : '5'} z-10`}>
-          <div className="flex items-center justify-between mb-4">
-            <div className={`p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300`}>
-              <Icon className={`w-${size === 'large' ? '6' : '5'} h-${size === 'large' ? '6' : '5'} ${iconColors[accent]}`} />
-              {isRealTime && (
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+        <div className={`relative p-${size === 'massive' ? '8' : size === 'large' ? '6' : '5'} z-10`}>
+          <div className="flex items-center justify-between mb-6">
+            <div className={`p-4 rounded-2xl bg-black/30 backdrop-blur-sm border border-white/20 group-hover:bg-black/50 group-hover:scale-110 transition-all duration-500`}>
+              <Icon className={`w-${size === 'massive' ? '8' : size === 'large' ? '6' : '5'} h-${size === 'massive' ? '8' : size === 'large' ? '6' : '5'} ${iconColors[accent]}`} />
+              {isQuantum && (
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-pulse shadow-lg shadow-purple-400/50"></div>
+              )}
+              {neuralActivity && (
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
               )}
             </div>
             {change && (
-              <div className={`px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm border border-white/20 ${
+              <div className={`px-4 py-2 rounded-full bg-black/40 backdrop-blur-sm border border-white/30 ${
                 changeType === 'positive' ? 'text-emerald-400' :
                 changeType === 'negative' ? 'text-red-400' :
                 'text-gray-400'
               }`}>
-                <span className="text-xs font-mono font-medium">{change}</span>
+                <span className="text-xs font-mono font-bold">{change}</span>
               </div>
             )}
           </div>
           
-          <div className="space-y-2">
-            <div className="flex items-baseline space-x-2">
-              <span className={`${size === 'large' ? 'text-3xl' : 'text-2xl'} font-light text-white tracking-tight`}>
+          <div className="space-y-3">
+            <div className="flex items-baseline space-x-3">
+              <span className={`${size === 'massive' ? 'text-5xl' : size === 'large' ? 'text-3xl' : 'text-2xl'} font-extralight text-white tracking-tight`}>
                 {typeof currentValue === 'number' ? currentValue.toLocaleString() : currentValue}
               </span>
               {unit && <span className="text-sm text-gray-400 font-mono">{unit}</span>}
             </div>
-            <div className="text-xs text-gray-400 uppercase tracking-wider font-medium">
+            <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">
               {label}
             </div>
           </div>
 
-          {/* Mini Trend Chart */}
-          {trend.length > 0 && (
-            <div className="mt-4 h-8 flex items-end space-x-1">
-              {trend.map((value, index) => (
+          {/* Quantum Energy Bar */}
+          {isQuantum && (
+            <div className="mt-6">
+              <div className="text-xs text-purple-400 mb-2 font-mono">QUANTUM COHERENCE</div>
+              <div className="h-2 bg-black/50 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-gradient-to-r from-purple-500 via-cyan-400 to-pink-500 rounded-full transition-all duration-1000 animate-pulse"
+                  style={{ width: `${typeof currentValue === 'number' ? Math.min(100, currentValue) : 85}%` }}
+                ></div>
+              </div>
+            </div>
+          )}
+
+          {/* Neural Activity Waves */}
+          {neuralActivity && (
+            <div className="mt-6 h-12 flex items-end space-x-1">
+              {[...Array(20)].map((_, i) => (
                 <div
-                  key={index}
-                  className={`w-1 bg-gradient-to-t ${
-                    value > 50 ? 'from-emerald-500 to-emerald-400' : 'from-red-500 to-red-400'
-                  } rounded-full transition-all duration-300 group-hover:scale-110`}
-                  style={{ height: `${Math.max(4, (value / 100) * 32)}px` }}
+                  key={i}
+                  className="flex-1 bg-gradient-to-t from-green-500 to-emerald-400 rounded-sm"
+                  style={{ 
+                    height: `${Math.sin((Date.now() / 1000 + i * 0.5)) * 20 + 30}px`,
+                    animation: `neural-wave 2s ease-in-out infinite`,
+                    animationDelay: `${i * 100}ms`
+                  }}
                 ></div>
               ))}
             </div>
           )}
         </div>
 
-        {/* Animated Border */}
-        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className={`absolute inset-0 rounded-2xl border-2 ${borderColors[accent]} animate-pulse`}></div>
+        {/* Quantum Border Animation */}
+        <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className={`absolute inset-0 rounded-3xl border-2 ${borderColors[accent]} animate-pulse`}></div>
         </div>
       </div>
     );
   };
 
-  const CollapsibleModule = ({ 
+  const QuantumModule = ({ 
     id,
     title, 
     status, 
     children,
     icon: Icon,
     delay = 0,
-    badge
+    badge,
+    quantum = false,
+    neural = false
   }: {
     id: string;
     title: string;
-    status: 'operational' | 'warning' | 'critical';
+    status: 'operational' | 'quantum' | 'neural' | 'critical';
     children: React.ReactNode;
     icon: React.ElementType;
     delay?: number;
     badge?: string;
+    quantum?: boolean;
+    neural?: boolean;
   }) => {
     const [isModuleVisible, setIsModuleVisible] = useState(false);
     const isExpanded = expandedModules.has(id);
@@ -236,55 +283,67 @@ export default function Dashboard({ crises }: DashboardProps) {
     }, [delay]);
     
     const statusColors = {
-      operational: 'border-emerald-500/20 bg-emerald-500/5 hover:border-emerald-400/40',
-      warning: 'border-yellow-500/20 bg-yellow-500/5 hover:border-yellow-400/40',
-      critical: 'border-red-500/20 bg-red-500/5 hover:border-red-400/40'
+      operational: 'border-emerald-500/30 bg-emerald-500/10 hover:border-emerald-400/60',
+      quantum: 'border-purple-500/30 bg-purple-500/10 hover:border-purple-400/60',
+      neural: 'border-green-500/30 bg-green-500/10 hover:border-green-400/60',
+      critical: 'border-red-500/30 bg-red-500/10 hover:border-red-400/60'
     };
 
     const statusDots = {
       operational: 'bg-emerald-400 shadow-emerald-400/50',
-      warning: 'bg-yellow-400 shadow-yellow-400/50',
+      quantum: 'bg-purple-400 shadow-purple-400/50',
+      neural: 'bg-green-400 shadow-green-400/50',
       critical: 'bg-red-400 shadow-red-400/50'
     };
 
     return (
       <div 
-        className={`rounded-2xl border ${statusColors[status]} backdrop-blur-xl overflow-hidden transition-all duration-700 ease-out hover:scale-[1.01] ${
-          isModuleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        className={`rounded-3xl border ${statusColors[status]} backdrop-blur-2xl overflow-hidden transition-all duration-1000 ease-out hover:scale-[1.01] ${
+          isModuleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
         style={{ transitionDelay: `${delay}ms` }}
       >
-        {/* Liquid Glass Reflection */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+        {/* Quantum Field Background */}
+        {quantum && (
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-cyan-500/5 to-pink-500/5 animate-pulse"></div>
+        )}
+        
+        {/* Neural Network Background */}
+        {neural && (
+          <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-blue-500/5 to-purple-500/5"></div>
+        )}
+        
+        {/* Holographic Reflection */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
         
         <button
           onClick={() => toggleModule(id)}
-          className="relative w-full p-5 flex items-center justify-between hover:bg-white/5 transition-all duration-300 group"
+          className="relative w-full p-6 flex items-center justify-between hover:bg-white/5 transition-all duration-500 group"
         >
           <div className="flex items-center space-x-4">
-            <div className="p-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/20 transition-all duration-300">
-              <Icon className="w-5 h-5 text-gray-300" />
+            <div className="p-3 rounded-2xl bg-black/30 backdrop-blur-sm border border-white/20 group-hover:bg-black/50 group-hover:scale-110 transition-all duration-500">
+              <Icon className="w-6 h-6 text-gray-300" />
             </div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">{title}</h3>
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest">{title}</h3>
             {badge && (
-              <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-mono rounded-full">
+              <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-mono rounded-full border border-cyan-500/30">
                 {badge}
               </span>
             )}
           </div>
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-3">
-              <div className={`w-2 h-2 rounded-full ${statusDots[status]} animate-pulse shadow-lg`}></div>
-              <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">
+              <div className={`w-3 h-3 rounded-full ${statusDots[status]} animate-pulse shadow-lg`}></div>
+              <span className="text-xs text-gray-400 font-mono uppercase tracking-widest">
                 {status}
               </span>
             </div>
-            <ChevronDown className={`w-4 h-4 text-gray-400 transition-all duration-300 ${isExpanded ? 'rotate-180' : ''} group-hover:text-white`} />
+            <ChevronDown className={`w-5 h-5 text-gray-400 transition-all duration-500 ${isExpanded ? 'rotate-180' : ''} group-hover:text-white`} />
           </div>
         </button>
         
-        <div className={`transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
-          <div className="p-5 pt-0 border-t border-white/10">
+        <div className={`transition-all duration-700 ease-in-out ${isExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+          <div className="p-6 pt-0 border-t border-white/10">
             {children}
           </div>
         </div>
@@ -299,7 +358,9 @@ export default function Dashboard({ crises }: DashboardProps) {
     isActive, 
     onClick,
     delay = 0,
-    badge
+    badge,
+    quantum = false,
+    neural = false
   }: {
     id: string;
     label: string;
@@ -308,6 +369,8 @@ export default function Dashboard({ crises }: DashboardProps) {
     onClick: () => void;
     delay?: number;
     badge?: string;
+    quantum?: boolean;
+    neural?: boolean;
   }) => {
     const [isTabVisible, setIsTabVisible] = useState(false);
 
@@ -319,55 +382,63 @@ export default function Dashboard({ crises }: DashboardProps) {
     return (
       <button
         onClick={onClick}
-        className={`relative flex items-center space-x-3 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 group overflow-hidden ${
+        className={`relative flex items-center space-x-3 px-5 py-4 rounded-2xl font-bold text-sm transition-all duration-500 group overflow-hidden ${
           isActive 
-            ? 'bg-cyan-500/20 text-cyan-300 shadow-lg border border-cyan-500/30' 
+            ? 'bg-gradient-to-r from-cyan-500/30 to-purple-500/30 text-cyan-300 shadow-lg border border-cyan-500/40 backdrop-blur-sm' 
             : 'text-gray-400 hover:text-white hover:bg-white/10 border border-transparent hover:border-white/20'
-        } ${isTabVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+        } ${isTabVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
         style={{ transitionDelay: `${delay}ms` }}
       >
-        {/* Active Background Glow */}
-        {isActive && (
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 rounded-xl"></div>
+        {/* Quantum Field Effect */}
+        {isActive && quantum && (
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-600/20 rounded-2xl animate-pulse"></div>
         )}
         
-        <Icon className="w-4 h-4 relative z-10" />
+        {/* Neural Network Effect */}
+        {isActive && neural && (
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-600/20 rounded-2xl"></div>
+        )}
+        
+        <Icon className="w-5 h-5 relative z-10" />
         {!isCollapsed && (
           <div className="flex items-center space-x-2 relative z-10">
-            <span>{label}</span>
+            <span className="uppercase tracking-wider">{label}</span>
             {badge && (
-              <span className="px-1.5 py-0.5 bg-cyan-500/30 text-cyan-300 text-xs font-mono rounded-full">
+              <span className="px-2 py-1 bg-cyan-500/30 text-cyan-300 text-xs font-mono rounded-full">
                 {badge}
               </span>
             )}
           </div>
         )}
         
-        {/* Hover Effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+        {/* Holographic Hover Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
       </button>
     );
   };
 
-  const SystemMetric = ({ 
+  const QuantumSystemMetric = ({ 
     icon: Icon, 
     label, 
     value, 
     unit, 
     status = 'normal',
-    trend = 'stable'
+    trend = 'stable',
+    quantum = false
   }: {
     icon: React.ElementType;
     label: string;
     value: string | number;
     unit: string;
-    status?: 'normal' | 'warning' | 'critical';
+    status?: 'normal' | 'warning' | 'critical' | 'quantum';
     trend?: 'up' | 'down' | 'stable';
+    quantum?: boolean;
   }) => {
     const statusColors = {
       normal: 'text-emerald-400',
       warning: 'text-yellow-400',
-      critical: 'text-red-400'
+      critical: 'text-red-400',
+      quantum: 'text-purple-400'
     };
 
     const trendIcons = {
@@ -377,257 +448,304 @@ export default function Dashboard({ crises }: DashboardProps) {
     };
 
     return (
-      <div className="flex items-center justify-between p-3 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+      <div className="flex items-center justify-between p-4 bg-black/30 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/50 hover:border-white/20 transition-all duration-500 group">
         <div className="flex items-center space-x-3">
-          <Icon className={`w-4 h-4 ${statusColors[status]}`} />
-          <span className="text-sm text-gray-300 font-mono">{label}</span>
+          <Icon className={`w-5 h-5 ${statusColors[status]} group-hover:scale-110 transition-transform duration-300`} />
+          <span className="text-sm text-gray-300 font-mono uppercase tracking-wider">{label}</span>
         </div>
-        <div className="flex items-center space-x-2">
-          <span className="text-sm text-white font-mono">{value}{unit}</span>
+        <div className="flex items-center space-x-3">
+          <span className="text-sm text-white font-mono font-bold">{value}{unit}</span>
           <span className="text-xs text-gray-500">{trendIcons[trend]}</span>
+          {quantum && (
+            <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse shadow-lg shadow-purple-400/50"></div>
+          )}
         </div>
       </div>
     );
   };
 
   return (
-    <div className={`fixed left-0 top-20 bottom-0 ${isCollapsed ? 'w-20' : 'w-96'} bg-black/20 backdrop-blur-2xl border-r border-white/10 overflow-y-auto transition-all duration-500 ease-in-out z-40`}>
-      {/* Liquid Glass Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-black/30 to-slate-900/50"></div>
+    <div className={`fixed left-0 top-20 bottom-0 ${isCollapsed ? 'w-24' : 'w-[420px]'} bg-gradient-to-br from-black/80 via-slate-900/80 to-black/80 backdrop-blur-3xl border-r border-white/10 overflow-y-auto transition-all duration-700 ease-in-out z-40`}>
+      {/* Quantum Field Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black/30 to-cyan-900/20"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent"></div>
       
-      <div className="relative z-10 p-6 space-y-6">
-        {/* Header with Close Button */}
-        <div className={`flex items-center justify-between transition-all duration-300 ${animationStates.loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+      {/* Neural Network Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.3) 1px, transparent 1px),
+                           radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                           radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.3) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px, 40px 40px, 80px 80px',
+          animation: 'neural-pulse 4s ease-in-out infinite'
+        }}></div>
+      </div>
+      
+      <div className="relative z-10 p-6 space-y-8">
+        {/* Header with Quantum Branding */}
+        <div className={`flex items-center justify-between transition-all duration-500 ${animationStates.loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
           {!isCollapsed && (
-            <div className="space-y-1">
-              <h1 className="text-lg font-semibold text-white tracking-tight">Crisis Intelligence</h1>
-              <p className="text-xs text-gray-400 font-mono uppercase tracking-wider">GLOBAL MONITORING</p>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-3">
+                <div className="relative">
+                  <Atom className="w-8 h-8 text-cyan-400 animate-spin" style={{ animationDuration: '8s' }} />
+                  <div className="absolute inset-0 bg-cyan-400 rounded-full blur-sm opacity-30 animate-pulse"></div>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-white tracking-tight">QUANTUM NEXUS</h1>
+                  <p className="text-xs text-gray-400 font-mono uppercase tracking-widest">NEURAL CRISIS MATRIX</p>
+                </div>
+              </div>
             </div>
           )}
           <div className="flex items-center space-x-2">
             <button
               onClick={() => setIsCollapsed(!isCollapsed)}
-              className="p-3 text-gray-400 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 border border-transparent hover:border-white/20 backdrop-blur-sm"
+              className="p-3 text-gray-400 hover:text-white hover:bg-white/10 rounded-2xl transition-all duration-500 border border-transparent hover:border-white/20 backdrop-blur-sm group"
             >
-              {isCollapsed ? <Menu className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
+              {isCollapsed ? <Atom className="w-6 h-6 animate-spin group-hover:animate-pulse" /> : <Orbit className="w-6 h-6 group-hover:animate-spin" />}
             </button>
             <button
               onClick={handleClose}
-              className="p-3 text-gray-400 hover:text-white hover:bg-red-500/20 rounded-xl transition-all duration-300 border border-transparent hover:border-red-500/30 backdrop-blur-sm"
+              className="p-3 text-gray-400 hover:text-white hover:bg-red-500/20 rounded-2xl transition-all duration-500 border border-transparent hover:border-red-500/30 backdrop-blur-sm"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
           </div>
         </div>
 
         {!isCollapsed && (
           <>
-            {/* Navigation Tabs */}
-            <div className="grid grid-cols-1 gap-2">
+            {/* Quantum Navigation */}
+            <div className="grid grid-cols-1 gap-3">
               <NavigationTab
                 id="overview"
-                label="Overview"
-                icon={Globe}
+                label="Quantum Overview"
+                icon={Atom}
                 isActive={activeSection === 'overview'}
                 onClick={() => setActiveSection('overview')}
                 delay={100}
                 badge={activeCrises.length.toString()}
+                quantum={true}
               />
               <NavigationTab
-                id="agents"
-                label="AI Agents"
+                id="neural"
+                label="Neural Network"
                 icon={Brain}
-                isActive={activeSection === 'agents'}
-                onClick={() => setActiveSection('agents')}
+                isActive={activeSection === 'neural'}
+                onClick={() => setActiveSection('neural')}
                 delay={150}
-                badge="4"
+                badge="ACTIVE"
+                neural={true}
               />
               <NavigationTab
-                id="threats"
-                label="Threat Matrix"
-                icon={AlertTriangle}
-                isActive={activeSection === 'threats'}
-                onClick={() => setActiveSection('threats')}
+                id="quantum"
+                label="Quantum Field"
+                icon={Zap}
+                isActive={activeSection === 'quantum'}
+                onClick={() => setActiveSection('quantum')}
                 delay={200}
+                badge="COHERENT"
+                quantum={true}
               />
               <NavigationTab
-                id="performance"
-                label="Performance"
-                icon={Activity}
-                isActive={activeSection === 'performance'}
-                onClick={() => setActiveSection('performance')}
+                id="matrix"
+                label="Threat Matrix"
+                icon={Crosshair}
+                isActive={activeSection === 'matrix'}
+                onClick={() => setActiveSection('matrix')}
                 delay={250}
+                badge="SCANNING"
               />
               <NavigationTab
-                id="analytics"
-                label="Analytics"
-                icon={BarChart3}
-                isActive={activeSection === 'analytics'}
-                onClick={() => setActiveSection('analytics')}
+                id="nexus"
+                label="Global Nexus"
+                icon={Globe}
+                isActive={activeSection === 'nexus'}
+                onClick={() => setActiveSection('nexus')}
                 delay={300}
+                badge="CONNECTED"
               />
             </div>
 
             {/* Content based on active section */}
             {activeSection === 'overview' && (
               <>
-                {/* Key Metrics Grid */}
+                {/* Quantum Metrics Grid */}
                 <div className="grid grid-cols-2 gap-4">
-                  <MetricCard
-                    icon={AlertTriangle}
-                    label="CRITICAL THREATS"
-                    value={activeCrises.length}
+                  <QuantumMetricCard
+                    icon={Atom}
+                    label="QUANTUM COHERENCE"
+                    value={realTimeData.quantumCoherence.toFixed(1)}
+                    unit="%"
                     change="+2.3%"
+                    changeType="positive"
+                    accent="quantum"
+                    delay={300}
+                    isQuantum={true}
+                  />
+                  <QuantumMetricCard
+                    icon={Brain}
+                    label="NEURAL ACTIVITY"
+                    value={realTimeData.neuralActivity.toFixed(1)}
+                    unit="%"
+                    change="+1.7%"
+                    changeType="positive"
+                    accent="neural"
+                    delay={350}
+                    neuralActivity={true}
+                  />
+                  <QuantumMetricCard
+                    icon={AlertTriangle}
+                    label="THREAT LEVEL"
+                    value={realTimeData.threatLevel}
+                    change="ELEVATED"
                     changeType="negative"
                     accent="red"
-                    delay={300}
-                    trend={[45, 67, 89, 76, 92, 85, 78]}
-                  />
-                  <MetricCard
-                    icon={Users}
-                    label="AFFECTED POP"
-                    value={Math.round(totalAffected / 1000000)}
-                    unit="M"
-                    change="-1.2%"
-                    changeType="positive"
-                    accent="orange"
-                    delay={350}
-                    trend={[78, 65, 72, 68, 59, 62, 55]}
-                  />
-                  <MetricCard
-                    icon={Brain}
-                    label="AI CONFIDENCE"
-                    value={mockGlobalStats.aiAccuracy}
-                    unit="%"
-                    change="+0.8%"
-                    changeType="positive"
-                    accent="cyan"
                     delay={400}
-                    trend={[85, 87, 89, 91, 88, 92, 94]}
                   />
-                  <MetricCard
-                    icon={Radar}
-                    label="MONITORING"
-                    value="127"
-                    unit=" REGIONS"
+                  <QuantumMetricCard
+                    icon={Globe}
+                    label="GLOBAL PULSE"
+                    value={realTimeData.globalPulse}
+                    unit=" TPS"
                     change="ACTIVE"
                     changeType="neutral"
-                    accent="purple"
+                    accent="cyan"
                     delay={450}
-                    isRealTime={true}
                   />
                 </div>
 
-                {/* System Status */}
-                <CollapsibleModule 
-                  id="system" 
-                  title="SYSTEM STATUS" 
-                  status="operational" 
-                  icon={Shield} 
+                {/* Massive Quantum Status Card */}
+                <QuantumMetricCard
+                  icon={Orbit}
+                  label="MATRIX STABILITY INDEX"
+                  value={realTimeData.matrixStability.toFixed(1)}
+                  unit="% STABLE"
+                  change="+0.8%"
+                  changeType="positive"
+                  accent="quantum"
+                  size="massive"
                   delay={500}
-                  badge="99.7%"
+                  isQuantum={true}
+                  neuralActivity={true}
+                />
+
+                {/* Quantum System Status */}
+                <QuantumModule 
+                  id="quantum-core" 
+                  title="QUANTUM CORE SYSTEMS" 
+                  status="quantum" 
+                  icon={Atom} 
+                  delay={600}
+                  badge="COHERENT"
+                  quantum={true}
                 >
                   <div className="space-y-4">
-                    <SystemMetric
+                    <QuantumSystemMetric
                       icon={Cpu}
-                      label="PROCESSING RATE"
-                      value={realTimeData.processingRate}
-                      unit=" TPS"
-                      status="normal"
+                      label="QUANTUM PROCESSING"
+                      value={realTimeData.globalPulse}
+                      unit=" QPS"
+                      status="quantum"
                       trend="up"
+                      quantum={true}
                     />
-                    <SystemMetric
+                    <QuantumSystemMetric
                       icon={Database}
-                      label="DATA SOURCES"
-                      value="127"
+                      label="NEURAL PATHWAYS"
+                      value="∞"
                       unit=" ACTIVE"
                       status="normal"
                       trend="stable"
                     />
-                    <SystemMetric
+                    <QuantumSystemMetric
                       icon={Network}
-                      label="NETWORK LATENCY"
-                      value={realTimeData.networkLatency}
-                      unit="ms"
-                      status={realTimeData.networkLatency > 50 ? 'warning' : 'normal'}
-                      trend="stable"
+                      label="QUANTUM ENTANGLEMENT"
+                      value={realTimeData.nexusConnections}
+                      unit=" NODES"
+                      status="quantum"
+                      trend="up"
+                      quantum={true}
                     />
-                    <SystemMetric
+                    <QuantumSystemMetric
                       icon={Shield}
-                      label="SECURITY STATUS"
-                      value="SECURE"
+                      label="MATRIX INTEGRITY"
+                      value="SECURED"
                       unit=""
                       status="normal"
                       trend="stable"
                     />
                   </div>
-                </CollapsibleModule>
+                </QuantumModule>
 
-                {/* Real-time Processing */}
-                <CollapsibleModule 
-                  id="processing" 
-                  title="REAL-TIME PROCESSING" 
-                  status="operational" 
-                  icon={Pulse} 
-                  delay={600}
-                  badge="LIVE"
+                {/* Neural Network Status */}
+                <QuantumModule 
+                  id="neural-network" 
+                  title="NEURAL NETWORK MATRIX" 
+                  status="neural" 
+                  icon={Brain} 
+                  delay={700}
+                  badge="LEARNING"
+                  neural={true}
                 >
                   <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="text-center p-3 bg-white/5 rounded-xl">
-                        <div className="text-lg font-mono font-bold text-cyan-400">{realTimeData.processingRate}</div>
-                        <div className="text-xs text-gray-400">TPS</div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-4 bg-black/30 rounded-2xl backdrop-blur-sm border border-green-500/20">
+                        <div className="text-2xl font-mono font-bold text-green-400">{realTimeData.neuralActivity.toFixed(1)}%</div>
+                        <div className="text-xs text-gray-400 uppercase tracking-wider">NEURAL SYNC</div>
                       </div>
-                      <div className="text-center p-3 bg-white/5 rounded-xl">
-                        <div className="text-lg font-mono font-bold text-purple-400">{realTimeData.activeConnections}</div>
-                        <div className="text-xs text-gray-400">CONNECTIONS</div>
+                      <div className="text-center p-4 bg-black/30 rounded-2xl backdrop-blur-sm border border-blue-500/20">
+                        <div className="text-2xl font-mono font-bold text-blue-400">∞</div>
+                        <div className="text-xs text-gray-400 uppercase tracking-wider">SYNAPSES</div>
                       </div>
                     </div>
-                    <div className="h-16 bg-gray-800/50 rounded-xl p-3 flex items-end space-x-1">
-                      {[...Array(20)].map((_, i) => (
+                    <div className="h-20 bg-black/50 rounded-2xl p-4 flex items-end space-x-1">
+                      {[...Array(30)].map((_, i) => (
                         <div
                           key={i}
-                          className="flex-1 bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-sm animate-pulse"
+                          className="flex-1 bg-gradient-to-t from-green-500 to-emerald-400 rounded-sm"
                           style={{ 
-                            height: `${Math.random() * 40 + 10}px`,
-                            animationDelay: `${i * 100}ms`
+                            height: `${Math.sin((Date.now() / 1000 + i * 0.3)) * 30 + 40}px`,
+                            animation: `neural-wave 3s ease-in-out infinite`,
+                            animationDelay: `${i * 50}ms`
                           }}
                         ></div>
                       ))}
                     </div>
                   </div>
-                </CollapsibleModule>
+                </QuantumModule>
               </>
             )}
 
-            {activeSection === 'agents' && (
-              <CollapsibleModule 
-                id="agents" 
-                title="AI AGENT NETWORK" 
-                status="operational" 
+            {activeSection === 'neural' && (
+              <QuantumModule 
+                id="neural-core" 
+                title="NEURAL CORE INTELLIGENCE" 
+                status="neural" 
                 icon={Brain} 
                 delay={300}
-                badge="4 ACTIVE"
+                badge="EVOLVING"
+                neural={true}
               >
-                <div className="space-y-3">
+                <div className="space-y-6">
                   {mockAIAgents.map((agent, index) => (
-                    <div key={agent.id} className="group p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 rounded-xl border border-cyan-500/30 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span className="text-sm text-cyan-400 font-mono font-bold">
+                    <div key={agent.id} className="group p-5 bg-black/30 rounded-2xl backdrop-blur-sm border border-green-500/20 hover:bg-black/50 hover:border-green-400/40 transition-all duration-500 cursor-pointer">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center space-x-4">
+                          <div className="w-12 h-12 rounded-2xl border border-green-500/40 bg-gradient-to-br from-green-500/30 to-emerald-600/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <span className="text-lg text-green-400 font-mono font-bold">
                               {agent.name.charAt(0)}
                             </span>
                           </div>
                           <div>
-                            <div className="text-sm text-white font-mono font-semibold">{agent.name.toUpperCase()}</div>
+                            <div className="text-sm text-white font-mono font-bold uppercase tracking-wider">{agent.name}</div>
                             <div className="text-xs text-gray-400">{agent.role}</div>
                           </div>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className={`w-2 h-2 rounded-full shadow-lg ${
-                            agent.status === 'active' ? 'bg-emerald-400 shadow-emerald-400/50 animate-pulse' :
+                          <div className={`w-3 h-3 rounded-full shadow-lg ${
+                            agent.status === 'active' ? 'bg-green-400 shadow-green-400/50 animate-pulse' :
                             agent.status === 'processing' ? 'bg-yellow-400 shadow-yellow-400/50 animate-pulse' :
                             'bg-gray-500'
                           }`}></div>
@@ -637,287 +755,294 @@ export default function Dashboard({ crises }: DashboardProps) {
                         </div>
                       </div>
                       
-                      {/* Agent Performance Metrics */}
-                      <div className="grid grid-cols-3 gap-2 text-center">
-                        <div className="p-2 bg-gray-800/50 rounded-lg">
-                          <div className="text-xs text-cyan-400 font-mono">{Math.floor(Math.random() * 100)}%</div>
-                          <div className="text-2xs text-gray-500">ACCURACY</div>
+                      {/* Neural Performance Matrix */}
+                      <div className="grid grid-cols-3 gap-3 text-center">
+                        <div className="p-3 bg-black/50 rounded-xl border border-green-500/20">
+                          <div className="text-xs text-green-400 font-mono font-bold">{Math.floor(Math.random() * 100)}%</div>
+                          <div className="text-2xs text-gray-500 uppercase tracking-wider">ACCURACY</div>
                         </div>
-                        <div className="p-2 bg-gray-800/50 rounded-lg">
-                          <div className="text-xs text-purple-400 font-mono">{Math.floor(Math.random() * 500)}ms</div>
-                          <div className="text-2xs text-gray-500">RESPONSE</div>
+                        <div className="p-3 bg-black/50 rounded-xl border border-cyan-500/20">
+                          <div className="text-xs text-cyan-400 font-mono font-bold">{Math.floor(Math.random() * 500)}ms</div>
+                          <div className="text-2xs text-gray-500 uppercase tracking-wider">RESPONSE</div>
                         </div>
-                        <div className="p-2 bg-gray-800/50 rounded-lg">
-                          <div className="text-xs text-green-400 font-mono">{Math.floor(Math.random() * 50)}k</div>
-                          <div className="text-2xs text-gray-500">PROCESSED</div>
+                        <div className="p-3 bg-black/50 rounded-xl border border-purple-500/20">
+                          <div className="text-xs text-purple-400 font-mono font-bold">{Math.floor(Math.random() * 50)}k</div>
+                          <div className="text-2xs text-gray-500 uppercase tracking-wider">PROCESSED</div>
                         </div>
+                      </div>
+
+                      {/* Neural Activity Visualization */}
+                      <div className="mt-4 h-8 flex items-end space-x-1">
+                        {[...Array(15)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="flex-1 bg-gradient-to-t from-green-500 to-emerald-400 rounded-sm"
+                            style={{ 
+                              height: `${Math.sin((Date.now() / 1000 + i * 0.4)) * 15 + 20}px`,
+                              animation: `neural-wave 2s ease-in-out infinite`,
+                              animationDelay: `${i * 80}ms`
+                            }}
+                          ></div>
+                        ))}
                       </div>
                     </div>
                   ))}
                 </div>
-              </CollapsibleModule>
+              </QuantumModule>
             )}
 
-            {activeSection === 'threats' && (
-              <CollapsibleModule 
-                id="threats" 
-                title="THREAT MATRIX" 
-                status="warning" 
-                icon={AlertTriangle} 
+            {activeSection === 'quantum' && (
+              <QuantumModule 
+                id="quantum-field" 
+                title="QUANTUM FIELD DYNAMICS" 
+                status="quantum" 
+                icon={Zap} 
                 delay={300}
-                badge="ACTIVE"
+                badge="ENTANGLED"
+                quantum={true}
+              >
+                <div className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      { label: 'COHERENCE', value: `${realTimeData.quantumCoherence.toFixed(1)}%`, color: 'purple', icon: Atom },
+                      { label: 'ENTANGLEMENT', value: '∞', color: 'cyan', icon: Orbit },
+                      { label: 'SUPERPOSITION', value: 'ACTIVE', color: 'pink', icon: Zap },
+                      { label: 'DECOHERENCE', value: '0.001%', color: 'green', icon: Shield }
+                    ].map((metric, index) => (
+                      <div key={metric.label} className="text-center p-5 bg-black/30 rounded-2xl backdrop-blur-sm border border-purple-500/20 hover:bg-black/50 hover:border-purple-400/40 transition-all duration-500 group">
+                        <metric.icon className={`w-8 h-8 mx-auto mb-3 ${
+                          metric.color === 'purple' ? 'text-purple-400' :
+                          metric.color === 'cyan' ? 'text-cyan-400' :
+                          metric.color === 'pink' ? 'text-pink-400' :
+                          'text-green-400'
+                        } group-hover:scale-110 transition-transform duration-500`} />
+                        <div className={`text-xl font-mono font-bold mb-2 ${
+                          metric.color === 'purple' ? 'text-purple-400' :
+                          metric.color === 'cyan' ? 'text-cyan-400' :
+                          metric.color === 'pink' ? 'text-pink-400' :
+                          'text-green-400'
+                        }`}>
+                          {metric.value}
+                        </div>
+                        <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">{metric.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Quantum Field Visualization */}
+                  <div className="bg-black/50 rounded-2xl p-5 border border-purple-500/20">
+                    <div className="text-sm text-purple-400 mb-4 font-mono uppercase tracking-wider">QUANTUM FIELD MATRIX</div>
+                    <div className="h-32 relative overflow-hidden rounded-xl bg-gradient-to-br from-purple-900/30 to-cyan-900/30">
+                      {/* Quantum Particles */}
+                      {[...Array(20)].map((_, i) => (
+                        <div
+                          key={i}
+                          className="absolute w-2 h-2 bg-purple-400 rounded-full animate-pulse"
+                          style={{
+                            left: `${Math.random() * 100}%`,
+                            top: `${Math.random() * 100}%`,
+                            animationDelay: `${Math.random() * 2}s`,
+                            animationDuration: `${1 + Math.random() * 2}s`
+                          }}
+                        />
+                      ))}
+                      
+                      {/* Quantum Waves */}
+                      <div className="absolute inset-0 opacity-30">
+                        {[...Array(5)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="absolute inset-0 border border-cyan-400/30 rounded-full"
+                            style={{
+                              animation: `quantum-ripple ${3 + i}s ease-in-out infinite`,
+                              animationDelay: `${i * 0.5}s`
+                            }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </QuantumModule>
+            )}
+
+            {activeSection === 'matrix' && (
+              <QuantumModule 
+                id="threat-matrix" 
+                title="THREAT DETECTION MATRIX" 
+                status="critical" 
+                icon={Crosshair} 
+                delay={300}
+                badge="SCANNING"
               >
                 <div className="space-y-4">
                   {[
-                    { level: 'CRITICAL', count: crises.filter(c => c.severity === 'critical').length, color: 'red', width: '85%', risk: 'EXTREME' },
-                    { level: 'HIGH', count: crises.filter(c => c.severity === 'high').length, color: 'orange', width: '65%', risk: 'HIGH' },
-                    { level: 'MEDIUM', count: crises.filter(c => c.severity === 'medium').length, color: 'yellow', width: '45%', risk: 'MODERATE' },
-                    { level: 'LOW', count: crises.filter(c => c.severity === 'low').length, color: 'green', width: '25%', risk: 'LOW' }
+                    { level: 'CRITICAL', count: crises.filter(c => c.severity === 'critical').length, color: 'red', threat: 'IMMINENT', probability: 94 },
+                    { level: 'HIGH', count: crises.filter(c => c.severity === 'high').length, color: 'orange', threat: 'ELEVATED', probability: 78 },
+                    { level: 'MEDIUM', count: crises.filter(c => c.severity === 'medium').length, color: 'yellow', threat: 'MODERATE', probability: 45 },
+                    { level: 'LOW', count: crises.filter(c => c.severity === 'low').length, color: 'green', threat: 'MINIMAL', probability: 12 }
                   ].map((threat, index) => (
-                    <div key={threat.level} className="p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="flex items-center space-x-3">
-                          <span className="text-xs text-gray-300 font-mono font-semibold">{threat.level}</span>
-                          <span className={`px-2 py-1 rounded-full text-xs font-mono ${
-                            threat.color === 'red' ? 'bg-red-500/20 text-red-300' :
-                            threat.color === 'orange' ? 'bg-orange-500/20 text-orange-300' :
-                            threat.color === 'yellow' ? 'bg-yellow-500/20 text-yellow-300' :
-                            'bg-green-500/20 text-green-300'
+                    <div key={threat.level} className="p-5 bg-black/30 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/50 hover:border-white/20 transition-all duration-500 group">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center space-x-4">
+                          <div className={`w-4 h-4 rounded-full ${
+                            threat.color === 'red' ? 'bg-red-400 shadow-red-400/50' :
+                            threat.color === 'orange' ? 'bg-orange-400 shadow-orange-400/50' :
+                            threat.color === 'yellow' ? 'bg-yellow-400 shadow-yellow-400/50' :
+                            'bg-green-400 shadow-green-400/50'
+                          } animate-pulse shadow-lg`}></div>
+                          <span className="text-sm text-white font-mono font-bold uppercase tracking-wider">{threat.level}</span>
+                          <span className={`px-3 py-1 rounded-full text-xs font-mono font-bold ${
+                            threat.color === 'red' ? 'bg-red-500/20 text-red-300 border border-red-500/30' :
+                            threat.color === 'orange' ? 'bg-orange-500/20 text-orange-300 border border-orange-500/30' :
+                            threat.color === 'yellow' ? 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30' :
+                            'bg-green-500/20 text-green-300 border border-green-500/30'
                           }`}>
-                            {threat.risk}
+                            {threat.threat}
                           </span>
                         </div>
-                        <span className={`text-lg font-mono font-bold ${
-                          threat.color === 'red' ? 'text-red-400' :
-                          threat.color === 'orange' ? 'text-orange-400' :
-                          threat.color === 'yellow' ? 'text-yellow-400' :
-                          'text-emerald-400'
-                        }`}>
-                          {threat.count}
-                        </span>
+                        <div className="text-right">
+                          <div className={`text-2xl font-mono font-bold ${
+                            threat.color === 'red' ? 'text-red-400' :
+                            threat.color === 'orange' ? 'text-orange-400' :
+                            threat.color === 'yellow' ? 'text-yellow-400' :
+                            'text-green-400'
+                          }`}>
+                            {threat.count}
+                          </div>
+                          <div className="text-xs text-gray-500 font-mono">ACTIVE</div>
+                        </div>
                       </div>
+                      
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="text-center p-3 bg-black/50 rounded-xl">
+                          <div className="text-lg font-mono font-bold text-cyan-400">{threat.probability}%</div>
+                          <div className="text-xs text-gray-500 uppercase tracking-wider">PROBABILITY</div>
+                        </div>
+                        <div className="text-center p-3 bg-black/50 rounded-xl">
+                          <div className="text-lg font-mono font-bold text-purple-400">{Math.floor(Math.random() * 24)}h</div>
+                          <div className="text-xs text-gray-500 uppercase tracking-wider">ETA</div>
+                        </div>
+                      </div>
+
                       <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
                         <div 
                           className={`h-full rounded-full transition-all duration-1000 ease-out group-hover:scale-105 ${
                             threat.color === 'red' ? 'bg-gradient-to-r from-red-500 to-red-400' :
                             threat.color === 'orange' ? 'bg-gradient-to-r from-orange-500 to-orange-400' :
                             threat.color === 'yellow' ? 'bg-gradient-to-r from-yellow-500 to-yellow-400' :
-                            'bg-gradient-to-r from-emerald-500 to-emerald-400'
+                            'bg-gradient-to-r from-green-500 to-green-400'
                           }`}
-                          style={{ width: threat.width }}
+                          style={{ width: `${threat.probability}%` }}
                         ></div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </CollapsibleModule>
+              </QuantumModule>
             )}
 
-            {activeSection === 'performance' && (
-              <CollapsibleModule 
-                id="performance" 
-                title="SYSTEM PERFORMANCE" 
+            {activeSection === 'nexus' && (
+              <QuantumModule 
+                id="global-nexus" 
+                title="GLOBAL NEXUS NETWORK" 
                 status="operational" 
-                icon={Activity} 
+                icon={Globe} 
                 delay={300}
-                badge="OPTIMAL"
+                badge="CONNECTED"
               >
-                <div className="space-y-4">
-                  <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
                     {[
-                      { label: 'RESPONSE', value: '0.3s', color: 'cyan', icon: Zap },
-                      { label: 'ACCURACY', value: '94.7%', color: 'purple', icon: Target },
+                      { label: 'NODES', value: realTimeData.nexusConnections, color: 'cyan', icon: Network },
+                      { label: 'REGIONS', value: '127', color: 'purple', icon: Globe },
                       { label: 'UPTIME', value: '99.7%', color: 'green', icon: Shield },
-                      { label: 'LOAD', value: `${realTimeData.systemLoad}%`, color: 'orange', icon: Gauge }
+                      { label: 'LATENCY', value: '0.3s', color: 'orange', icon: Zap }
                     ].map((metric, index) => (
-                      <div key={metric.label} className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                        <metric.icon className={`w-6 h-6 mx-auto mb-2 ${
+                      <div key={metric.label} className="text-center p-5 bg-black/30 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/50 hover:border-white/20 transition-all duration-500 group">
+                        <metric.icon className={`w-8 h-8 mx-auto mb-3 ${
                           metric.color === 'cyan' ? 'text-cyan-400' :
                           metric.color === 'purple' ? 'text-purple-400' :
-                          metric.color === 'green' ? 'text-emerald-400' :
+                          metric.color === 'green' ? 'text-green-400' :
                           'text-orange-400'
-                        } group-hover:scale-110 transition-transform duration-300`} />
-                        <div className={`text-xl font-mono font-bold mb-1 ${
+                        } group-hover:scale-110 transition-transform duration-500`} />
+                        <div className={`text-xl font-mono font-bold mb-2 ${
                           metric.color === 'cyan' ? 'text-cyan-400' :
                           metric.color === 'purple' ? 'text-purple-400' :
-                          metric.color === 'green' ? 'text-emerald-400' :
+                          metric.color === 'green' ? 'text-green-400' :
                           'text-orange-400'
                         }`}>
                           {metric.value}
                         </div>
-                        <div className="text-xs text-gray-400 uppercase tracking-wider font-medium">{metric.label}</div>
+                        <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">{metric.label}</div>
                       </div>
                     ))}
                   </div>
                   
-                  {/* Performance Graph */}
-                  <div className="bg-gray-800/50 rounded-xl p-4">
-                    <div className="text-sm text-gray-300 mb-3 font-mono">SYSTEM LOAD (24H)</div>
-                    <div className="h-16 flex items-end space-x-1">
-                      {[...Array(24)].map((_, i) => (
+                  {/* Global Network Visualization */}
+                  <div className="bg-black/50 rounded-2xl p-5 border border-cyan-500/20">
+                    <div className="text-sm text-cyan-400 mb-4 font-mono uppercase tracking-wider">GLOBAL NETWORK STATUS</div>
+                    <div className="h-32 relative overflow-hidden rounded-xl bg-gradient-to-br from-cyan-900/30 to-blue-900/30">
+                      {/* Network Nodes */}
+                      {[...Array(15)].map((_, i) => (
                         <div
                           key={i}
-                          className="flex-1 bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-sm"
-                          style={{ height: `${Math.random() * 60 + 10}%` }}
-                        ></div>
+                          className="absolute w-3 h-3 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/50"
+                          style={{
+                            left: `${Math.random() * 90 + 5}%`,
+                            top: `${Math.random() * 80 + 10}%`,
+                            animationDelay: `${Math.random() * 2}s`,
+                            animationDuration: `${1 + Math.random()}s`
+                          }}
+                        />
                       ))}
+                      
+                      {/* Connection Lines */}
+                      <svg className="absolute inset-0 w-full h-full opacity-30">
+                        {[...Array(8)].map((_, i) => (
+                          <line
+                            key={i}
+                            x1={`${Math.random() * 100}%`}
+                            y1={`${Math.random() * 100}%`}
+                            x2={`${Math.random() * 100}%`}
+                            y2={`${Math.random() * 100}%`}
+                            stroke="currentColor"
+                            strokeWidth="1"
+                            className="text-cyan-400 animate-pulse"
+                          />
+                        ))}
+                      </svg>
                     </div>
                   </div>
                 </div>
-              </CollapsibleModule>
+              </QuantumModule>
             )}
-
-            {activeSection === 'analytics' && (
-              <CollapsibleModule 
-                id="analytics" 
-                title="PREDICTIVE ANALYTICS" 
-                status="operational" 
-                icon={BarChart3} 
-                delay={300}
-                badge="ML"
-              >
-                <div className="space-y-4">
-                  <div className="grid grid-cols-1 gap-3">
-                    <div className="p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <Hexagon className="w-4 h-4 text-cyan-400" />
-                        <span className="text-sm font-mono text-cyan-300">PREDICTION ENGINE</span>
-                      </div>
-                      <div className="text-xs text-gray-300">Next crisis probability: 73% (West Africa)</div>
-                    </div>
-                    
-                    <div className="p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-500/20">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <Waves className="w-4 h-4 text-purple-400" />
-                        <span className="text-sm font-mono text-purple-300">PATTERN ANALYSIS</span>
-                      </div>
-                      <div className="text-xs text-gray-300">Anomaly detected in climate data streams</div>
-                    </div>
-                    
-                    <div className="p-4 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl border border-green-500/20">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <Target className="w-4 h-4 text-green-400" />
-                        <span className="text-sm font-mono text-green-300">INTERVENTION</span>
-                      </div>
-                      <div className="text-xs text-gray-300">Recommended action: Deploy aid to Somalia</div>
-                    </div>
-                  </div>
-                </div>
-              </CollapsibleModule>
-            )}
-
-            {/* Recent Events */}
-            <CollapsibleModule 
-              id="events" 
-              title="RECENT EVENTS" 
-              status="operational" 
-              icon={Clock} 
-              delay={600}
-              badge="LIVE"
-            >
-              <div className="space-y-3">
-                {[
-                  { 
-                    time: '14:32:07', 
-                    event: 'FOOD SECURITY ALERT - EAST AFRICA', 
-                    severity: 'critical',
-                    id: 'FS-2025-001',
-                    source: 'SATELLITE'
-                  },
-                  { 
-                    time: '13:45:23', 
-                    event: 'CLIMATE ANOMALY DETECTED - SOUTH ASIA', 
-                    severity: 'high',
-                    id: 'CL-2025-047',
-                    source: 'WEATHER'
-                  },
-                  { 
-                    time: '12:18:45', 
-                    event: 'CRISIS RESOLVED - EASTERN EUROPE', 
-                    severity: 'resolved',
-                    id: 'CR-2025-156',
-                    source: 'FIELD'
-                  }
-                ].map((event, index) => (
-                  <div key={index} className="p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer group">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs text-gray-400 font-mono">{event.time}</span>
-                      <div className="flex items-center space-x-2">
-                        <span className="text-xs text-gray-500 font-mono">{event.source}</span>
-                        <span className="text-xs text-gray-500 font-mono">{event.id}</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className={`w-2 h-2 rounded-full mt-1.5 shadow-lg ${
-                        event.severity === 'critical' ? 'bg-red-400 shadow-red-400/50' :
-                        event.severity === 'high' ? 'bg-orange-400 shadow-orange-400/50' :
-                        event.severity === 'resolved' ? 'bg-emerald-400 shadow-emerald-400/50' :
-                        'bg-yellow-400 shadow-yellow-400/50'
-                      } animate-pulse`}></div>
-                      <span className="text-xs text-gray-300 leading-tight group-hover:text-white transition-colors duration-300">
-                        {event.event}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CollapsibleModule>
-
-            {/* Footer */}
-            <div className={`border-t border-white/10 pt-6 transition-all duration-500 ${animationStates.loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '700ms' }}>
-              <div className="flex items-center justify-between text-xs text-gray-500 font-mono">
-                <span>ETHRON v2.1.0</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
-                  <span>SECURE</span>
-                </div>
-              </div>
-            </div>
           </>
         )}
-
-        {/* Collapsed State */}
-        {isCollapsed && (
-          <div className="space-y-4">
-            <div className="flex flex-col space-y-3">
-              {[
-                { icon: Globe, active: activeSection === 'overview', badge: activeCrises.length },
-                { icon: Brain, active: activeSection === 'agents', badge: 4 },
-                { icon: AlertTriangle, active: activeSection === 'threats' },
-                { icon: Activity, active: activeSection === 'performance' },
-                { icon: BarChart3, active: activeSection === 'analytics' }
-              ].map(({ icon: Icon, active, badge }, index) => (
-                <button 
-                  key={index}
-                  className={`relative p-3 rounded-xl transition-all duration-300 border backdrop-blur-sm ${
-                    active 
-                      ? 'text-cyan-400 bg-cyan-500/20 border-cyan-500/30' 
-                      : 'text-gray-400 hover:text-white hover:bg-white/10 border-transparent hover:border-white/20'
-                  }`}
-                >
-                  <Icon className="w-5 h-5" />
-                  {badge && (
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-                      {badge}
-                    </div>
-                  )}
-                </button>
-              ))}
-            </div>
-            
-            <div className="border-t border-white/10 pt-4">
-              <div className="flex flex-col space-y-3">
-                <button className="p-3 text-gray-400 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 border border-transparent hover:border-white/20 backdrop-blur-sm">
-                  <Settings className="w-5 h-5" />
-                </button>
-                <button className="p-3 text-gray-400 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 border border-transparent hover:border-white/20 backdrop-blur-sm">
-                  <Bell className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Custom Animations */}
+      <style jsx>{`
+        @keyframes neural-pulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.8; }
+        }
+        
+        @keyframes neural-wave {
+          0%, 100% { transform: scaleY(0.5); }
+          50% { transform: scaleY(1.2); }
+        }
+        
+        @keyframes quantum-ripple {
+          0% { transform: scale(0.8); opacity: 1; }
+          100% { transform: scale(2); opacity: 0; }
+        }
+        
+        @keyframes shimmer {
+          0% { transform: translateX(-100%) skewX(-12deg); }
+          100% { transform: translateX(200%) skewX(-12deg); }
+        }
+      `}</style>
     </div>
   );
 }
