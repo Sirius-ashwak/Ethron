@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { mockGlobalStats, mockAIAgents } from '../data/mockData';
 import { Crisis } from '../types/crisis';
-import { 
-  Activity, AlertTriangle, Users, Brain, TrendingUp, Globe, 
-  Zap, Clock, ChevronRight, Shield, Target, Cpu, Database,
-  ChevronDown, Menu, X, Settings, Bell, Layers, BarChart3,
-  Eye, Wifi, Server, HardDrive, Network, Gauge, Radar,
-  Satellite, Monitor, Pulse, Waves, Hexagon
-} from 'lucide-react';
+import { Activity, AlertTriangle, Users, Brain, TrendingUp, Globe, Zap, Clock, ChevronRight, Shield, Target, Cpu, Database, ChevronDown, Menu, X, Settings, Bell, Layers, BarChart3, Eye, Wifi, Server, HardDrive, Network, Gauge, Radar, Satellite, Monitor, HeartPulse as Pulse, Waves, Hexagon } from 'lucide-react';
 
 interface DashboardProps {
   crises: Crisis[];
